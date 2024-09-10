@@ -17,12 +17,30 @@
             height: 100%;
         }
 
+        p,
+        h2 {
+            text-align: center;
+            max-width: 800px;
+            /* Bound the width of text */
+            margin: 0 auto;
+            /* Center the text block */
+            padding: 1rem;
+            /* Add some padding */
+        }
 
         #contact a {
             color: #6a93bb;
+            text-align: center;
+
             /* Change this to your desired color */
             text-decoration: none;
             /* Optional: Remove underline */
+        }
+
+        #contact p {
+            text-align: center;
+            margin: 0;
+            line-height: 1.6;
         }
 
         #contact a:hover {
@@ -148,10 +166,12 @@
         main {
             position: relative;
             z-index: 2;
-            height: calc(100vh - 200px); /* Subtract the height of the header */
-            overflow-y: auto; /* Allow scrolling within the content section */
+            height: calc(100vh - 200px);
+            /* Subtract the height of the header */
+            overflow-y: auto;
+            /* Allow scrolling within the content section */
             width: 100vw;
-            
+
         }
 
         .content-section {
@@ -227,12 +247,14 @@
             overflow-y: auto;
             height: 100%;
         }
+
         #projectDetails h3 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-align: center; /* Center the project title */
-}
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-align: center;
+            /* Center the project title */
+        }
 
 
         #projectDetails img {
@@ -255,15 +277,20 @@
             line-height: 1.6;
             /* Improve readability */
         }
-        #projectDescription a {
-    color: #6a93bb; /* Match the contact link color */
-    text-decoration: none; /* Remove underline */
-}
 
-#projectDescription a:hover {
-    color: #0055a5; /* Hover color matches contact hover */
-    text-decoration: underline; /* Optional: Add underline on hover */
-}
+        #projectDescription a {
+            color: #6a93bb;
+            /* Match the contact link color */
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        #projectDescription a:hover {
+            color: #0055a5;
+            /* Hover color matches contact hover */
+            text-decoration: underline;
+            /* Optional: Add underline on hover */
+        }
 
         #projectDetails h3 {
             margin-top: 0;
@@ -276,41 +303,47 @@
             color: #dcdcdc;
         }
 
-        /* Responsive Adjustments for Smaller Screens */
+        /* On mobile, adjust project navbar width */
         @media screen and (max-width: 768px) {
             #projectNav {
-                width: 150px;
-                /* Keep the navigation small to the left */
-                top: 100px;
-                /* Keep room for header */
+                width: 130px;
+                /* Reduce the width */
+                top: 80px;
                 left: 10px;
                 max-height: calc(100vh - 120px);
             }
 
             #projectDetails {
-                margin-left: 170px;
-                /* Ensure project details don't overlap with nav */
-                width: calc(100% - 190px);
-                /* Adjust width based on nav */
+                margin-left: 150px;
+                /* Adjust to match smaller nav size */
+                width: calc(100% - 160px);
                 max-height: calc(100vh - 120px);
-                margin-top: 20px;
             }
         }
 
         @media screen and (max-width: 480px) {
             #projectNav {
-                width: 120px;
+                width: 100px;
+                /* Shrink the nav even further */
                 top: 100px;
                 left: 5px;
                 max-height: calc(100vh - 120px);
             }
 
             #projectDetails {
-                margin-left: 130px;
-                width: calc(100% - 150px);
+                margin-left: 110px;
+                /* Adjust to smaller nav size */
+                width: calc(100% - 120px);
+                /* Make the description wider */
                 max-height: calc(100vh - 140px);
+                font-size: 0.9rem;
+                /* Slightly reduce font size for better fit */
             }
-        }
+
+            /* Adjust text padding for readability on small screens */
+            #projectDetails p {
+                padding: 0 1rem;
+            }
     </style>
 
 </head>
@@ -329,11 +362,14 @@
     <main>
         <section id="home" class="content-section active">
             <h2></h2>
-            <p>hi im derby, this is a portfolio of many of my projects. i am interested in creative coding, complex systems, physics simulations, ai/ml, and much more. this web page itself has a built in fluid simulation that you can play with by moving/resizing the browser window around and with the settings panel in the bottom right </p>
+            <p>hi im derby, this is a portfolio of many of my projects. i am interested in creative coding, complex
+                systems, physics simulations, ai/ml, and much more. this web page itself has a built in fluid simulation
+                that you can play with by moving/resizing the browser window around and with the settings panel in the
+                bottom right </p>
         </section>
 
         <section id="projects" class="content-section">
-            
+
             <div id="projectNav">
                 <ul>
                     <!-- The project list will be dynamically populated by JavaScript -->
